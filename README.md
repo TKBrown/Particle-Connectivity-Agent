@@ -7,7 +7,7 @@ Particle's default connectivity agent is great for rapid benchtop protos, though
 - Upon boot, the Setup() will not be invoked until WiFi connectivity is established - preventing initialization of IO
 - Cloud connection related functions will block execution of the application
 
-Due to these issues, I built my own class to manage connectivity with the Particle Cloud. Basic usage is simple: set the system mode to manual, instantiate the class, and call Update() during loops.
+Due to these issues, I built my own class to manage connectivity with the Particle Cloud. Basic usage is simple: set the system mode to manual, instantiate the class, and call Process() during loops.
 
 ```c++
 
@@ -23,7 +23,7 @@ void setup()
 
 void loop()
 {
-  Agent.Update();
+  Agent.Process();
 }
 
 ```
